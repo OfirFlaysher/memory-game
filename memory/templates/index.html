@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+    <title>Memory Game</title>
+  </head>
+  <body>    
+    <form action="{{ url_for('game') }}" method="post">
+      <input id="player1" type="radio" name="players" value="1" checked> שחקן אחד<br>
+      <input id="player2" type="radio" name="players" value="2"> שני שחקנים<br>
+      <input id="paw patrol" type="radio" name="type" value="paw-patrol" checked> 
+      יחידת החילוץ<br>
+      <input id="ninja turtles" type="radio" name="type" value="ninja-turtles"> 
+      צבי הנינג'ה<br>
+      <input type="submit" value="התחילו משחק">
+    </form>
+
+  </body>
+</html>

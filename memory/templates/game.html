@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     
+    <title>Memory Game</title>
+  </head>
+  <body>    
+        
+    <h1> ניקוד: 0 נסיונות: 0 </h1>
+    <div class="wrapper">
+    {% for i in range(h) %}
+      <div class="row">
+      {% for j in range(w) %}            
+        <img class="image" src="static/{% block type %}{% endblock %}/cover.jpeg" 
+             id="a{{i}}{{j}}" onclick="flip('a{{i}}{{j}}', '{{l[i * w + j]}}')">     
+      {% endfor %}
+      </div>
+    {% endfor %}  
+    </div>
+    <script>
+      let kind = "{{kind}}"; 
+      let players = "{{players}}";
+    </script>
+    <script src="{{ url_for('static', filename='game.js')}}"></script>
+  </body>
+</html>
